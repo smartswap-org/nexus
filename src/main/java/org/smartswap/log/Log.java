@@ -18,8 +18,7 @@ public class Log {
 
     @Id
     private UUID id;
-    private Timestamp startTime;
-    private Timestamp endTime;
+    private Timestamp date;
     private String level;
     private String service;
     private String message;

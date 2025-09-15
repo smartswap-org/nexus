@@ -12,9 +12,8 @@ import java.util.UUID;
 
 @Builder
 public record LogDTO(
-        @Nullable UUID id,
-        Timestamp startTime,
-        Timestamp endTime,
+        UUID id,
+        Timestamp date,
         String level,
         String service,
         String message,
@@ -32,8 +31,7 @@ public record LogDTO(
 
         return LogDTO.builder()
                 .id(UUID.fromString(rs.getString("id")))
-                .startTime(rs.getTimestamp("startTime"))
-                .endTime(rs.getTimestamp("endTime"))
+                .date(rs.getTimestamp("date"))
                 .level(rs.getString("level"))
                 .service(rs.getString("service"))
                 .message(rs.getString("message"))
